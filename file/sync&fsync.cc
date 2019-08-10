@@ -5,7 +5,7 @@
 #define DEFAULT_INDEX 0
 
 int main(int argc, char **argv) {
-    int fd = open("./sync.txt", O_CREAT | O_APPEND | O_WRONLY);
+    int fd = open("./sync&fsync.txt", O_CREAT | O_APPEND | O_WRONLY);
 
     char buf[] = "Hello, world!";
     ssize_t length = write(fd, buf, sizeof(buf) - 1);
